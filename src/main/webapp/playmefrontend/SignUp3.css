@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: auto;
+    font-family: 'Kanit', sans-serif;
+}
+#main_container{
+    height: 80vh;
+    width: 30vw;
+    border-radius: 2vw;
+    background-color: rgb(20, 20, 20);
+    position: relative;
+    top: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 1vw;
+}
+img{
+    width: 3vw;
+}
+h2{
+    height: 3vw;
+    width: 24vw;
+    padding-left: 2vw;
+    display: flex;
+    align-items: flex-end;
+    color: gray;
+    font-size: 1.1vw;
+    letter-spacing: 0.05vw;
+    border-top: 1px solid gray;
+}
+h1{
+    width: 22vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    color: white;
+    letter-spacing: 0.1vw;
+    line-height: 3.2vw;
+}
+form{
+    width: 22vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+h3{
+    height: 2vw;
+    color: white;
+    font-size: 1.2vw;
+}
+.password{
+    height: 2.5vw;
+    border: 1px solid gray;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+    padding-left: 0.5vw;
+    border-radius: 10px;
+}
+ul{
+    padding-left: 1vw;
+    padding-bottom: 1vw;
+    color: white;
+}
+#next{
+    height: 2.5vw;
+    border: none;
+    background-image:linear-gradient(175deg,orangered,skyblue) ;
+    border-radius: 2vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    transition: all 0.3s;
+}
+#next:hover{
+    transform: scale(1.03);
+}
+p{
+    width: 21vw;
+    font-size: 0.8vw;
+    color: gray;
+    letter-spacing: 0.03vw;
+    word-spacing: 0.1vw;
+}
+
+a{
+    color: skyblue;
+}
+a:hover{
+    color: orangered;
+}
+h4{
+    height: auto;
+    width: 22vw;
+    color: orangered;
+    font-size: 1.1vw;
+}

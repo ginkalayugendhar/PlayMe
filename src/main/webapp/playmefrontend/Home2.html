@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./Home2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./Home2.js" defer></script>
+</head>
+<body>
+    <div id="main_container">
+        <div id="nav_bar">
+            <div id="nav_bar_left">
+                <a href="./Home2.html" id="playme">
+                    <img src="./logo2.png" alt="" id="logo">
+                    <b>PlayMe</b>
+                </a>
+                <a href="./Home2.html" id="home">
+                    <i class="fa-solid fa-house"></i>
+                    <b>Home</b>
+                </a>
+            </div>
+            <div id="nav_bar_right">
+                <a href="#" class="nav_bar_right_a">Explore Premium</a>
+                <button id="profile" onclick="profileDetails()">G</button>
+                <div id="profile_details">
+                    <h1>Account<i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
+                    <h1>Profile</h1>
+                    <h1>Upgrade to Premium</h1>
+                    <h1>Settings</h1>
+                    <h1>Log out</h1>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content_left">
+                <div id="content_left_top">
+                    <div id="library">
+                        <span id="collapse">
+                            <i class="fa-solid fa-lines-leaning fa-flip-both"></i>
+                            <h2 id="ylib">Your Library</h2>
+                        </span>
+                        <a href="#" id="addplaylist" onclick="addPlaylist()">
+                            <i class="fa-regular fa-plus"></i>
+                        </a>
+                    </div>
+                    <div class="playlistdetails" onclick="playlist()">
+                        <aside class="musicicon">
+                            <i class="fa-solid fa-music"></i>
+                        </aside>
+                        <aside class="playlistname">
+                            <h2>Play List Name</h2>
+                        <h3>Playlist . <b id="profile_name"></b></h3>
+                        </aside>
+                    </div>
+                    <div class="playlistsections">
+                        <section class="playlistsection1">
+                            <h2>Create your first playlist</h2>
+                            <h3>it's easy,we'll help you</h3>
+                            <a href="#" class="playbut1" onclick="addPlaylist()">Create Playlist</a>
+                        </section>
+                    </div>
+                    <div id="addplaylistbut">
+                        <h1>Add Playlist</h1>
+                        <form action="">
+                            <input type="text" placeholder="Enter Playlist Name">
+                            <input type="submit" value="Add Playlist">
+                        </form>
+                    </div>
+                </div>
+                <div id="content_left_bottom">
+                    <aside class="libraryads">
+                        <a href="" class="libraryads1">Legal</a>
+                        <a href="" class="libraryads1">PrivacyCenter</a>
+                        <a href="" class="libraryads1">PrivacyPolicy</a>
+                        <a href="" class="libraryads1">Cookies</a>
+                        <a href="" class="libraryads1">AboutAds</a>
+                        <a href="" class="libraryads1">Accessibility</a>
+                    </aside>
+                    <aside class="librarycookies">
+                        <a href="" class="libraryads2">Cookies</a>
+                    </aside>
+                    <aside class="langbut">
+                        <button class="langbut1">
+                            <i class="fa-sharp fa-solid fa-globe"></i>
+                            <b>English</b>
+                        </button>
+                    </aside>
+                </div>
+            </div>
+            <div id="playlist_container">
+                <div id="playlist_container_top">
+                    <aside class="musicicon2">
+                        <i class="fa-solid fa-music"></i>
+                    </aside>
+                    <aside class="playlistname2">
+                        <p>Playlist</p>
+                        <h2>Play List Name</h2>
+                        <h3>Playlist G.Yugendhar</h3>
+                    </aside>
+                </div>
+                <div id="playlist_container_bottom">
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Album</th>
+                            <th>⏱️</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="playlist_img"><br>Title Name. Artist Name</td>
+                            <td>Album Name</td>
+                            <td>Duration</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="content_right">
+                <div class="content_list">
+                    <h1 class="names">Artists</h1>
+                    <div id="artists">
+                        <a href="" class="song">
+                            <b class="playbutton">
+                                <i class="fa-solid fa-play"></i>
+                            </b>
+                            <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="artistimg">
+                            <h1>Iofi beats</h1>
+                            <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                        </a>
+                        <!-- <a href="" class="song">
+                            <b class="playbutton">
+                                <i class="fa-solid fa-play"></i>
+                            </b>
+                            <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="artistimg">
+                            <h1>Iofi beats</h1>
+                            <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                        </a>
+                        <a href="" class="song">
+                            <b class="playbutton">
+                                <i class="fa-solid fa-play"></i>
+                            </b>
+                            <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="artistimg">
+                            <h1>Iofi beats</h1>
+                            <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                        </a>
+                        <a href="" class="song">
+                            <b class="playbutton">
+                                <i class="fa-solid fa-play"></i>
+                            </b>
+                            <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="artistimg">
+                            <h1>Iofi beats</h1>
+                            <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                        </a>
+                        <a href="" class="song">
+                            <b class="playbutton">
+                                <i class="fa-solid fa-play"></i>
+                            </b>
+                            <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="artistimg">
+                            <h1>Iofi beats</h1>
+                            <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                        </a>
+                        <a href="" class="song">
+                            <b class="playbutton">
+                                <i class="fa-solid fa-play"></i>
+                            </b>
+                            <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" class="artistimg">
+                            <h1>Iofi beats</h1>
+                            <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="content_list">
+                    <h1 class="names">Artists</h1>
+                    <a href="" class="song">
+                        <b class="playbutton">
+                            <i class="fa-solid fa-play"></i>
+                        </b>
+                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="">
+                        <h1>Iofi beats</h1>
+                        <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                    </a>
+                </div>
+                <div class="content_list">
+                    <h1 class="names">Artists</h1>
+                    <a href="" class="song">
+                        <b class="playbutton">
+                            <i class="fa-solid fa-play"></i>
+                        </b>
+                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="">
+                        <h1>Iofi beats</h1>
+                        <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                    </a>
+                </div>
+                <div class="content_list">
+                    <h1 class="names">Artists</h1>
+                    <a href="" class="song">
+                        <b class="playbutton">
+                            <i class="fa-solid fa-play"></i>
+                        </b>
+                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="">
+                        <h1>Iofi beats</h1>
+                        <h6>chill beats, Iofi vibes, new tracks every...</h6>
+                    </a>
+                </div>
+                <div class="content_list">
+                    <aside class="advertise">
+                        <aside class="ads">
+                            <section class="ads1">
+                                <h3>Company</h3>
+                                <a href="" class="adstags">About</a>
+                                <a href="" class="adstags">Jobs</a>
+                                <a href="" class="adstags">For the Record</a>
+                            </section>
+                            <section class="ads2">
+                                <h3>Communities</h3>
+                                <a href="" class="adstags">For Artists</a>
+                                <a href="" class="adstags">Developers</a>
+                                <a href="" class="adstags">Advertising</a>
+                                <a href="" class="adstags">Investors</a>
+                                <a href="" class="adstags">Vendors</a>
+                            </section>
+                            <section class="ads3">
+                                <h3>Useful links</h3>
+                                <a href="" class="adstags">Support</a>
+                                <a href="" class="adstags">Free Mobile App</a>
+                            </section>
+                        </aside>
+                        <aside class="otherlogin">
+                            <a href="" class="otherlogin1">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="" class="otherlogin1">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="" class="otherlogin1">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </aside>
+                    </aside>
+                    <aside class="copyright">
+                        <span class="copyright1">
+                            <i class="fa-regular fa-copyright" id="copyright2"></i>
+                            <b>2024 PlayMe AB</b>
+                        </span>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div id="previewbar">
+            <aside id="previewbar_left">
+                <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" id="songimg">
+                <span id="songdetails">
+                    <h1 class="songdetail">Audio Name(From AlbumName)</h1>
+                    <h2 class="songdetail" id="artistname">Artist Name</h2>
+                </span>
+            </aside>
+            <aside id="previewbar_middle">
+                <audio src="./Suzume_no_Tojimari_(すずめの戸締まり)_Title_Track(128k).mp3" controls muted id="audiotrack"></audio>
+            </aside>
+            <aside id="previewbar_right"  onclick="maxmin()">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </aside>
+        </div>
+        <div id="song" style="background-image: url(https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037);">
+            <div id="previewbar2">
+                <aside id="previewbar_left">
+                    <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="" id="songimg">
+                    <span id="songdetails">
+                        <h1 class="songdetail">Audio Name(From AlbumName)</h1>
+                        <h2 class="songdetail" id="artistname">Artist Name</h2>
+                    </span>
+                </aside>
+                <aside id="previewbar_middle">
+                    <audio src="./Suzume_no_Tojimari_(すずめの戸締まり)_Title_Track(128k).mp3" controls muted id="audiotrack"></audio>
+                </aside>
+                <aside id="previewbar_right2" onclick="maxmin()">
+                    <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+                </aside>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

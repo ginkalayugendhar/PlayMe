@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./SignUp4.css">
+    <script src="./SignUp4.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h2>Step 2 of 3</h2>
+        <h1>Tell us about yourself</h1>
+        <form action="./SignUp5.html">
+            <h3>Name </h3>
+            <h4> This name will appear on your profile</h4>
+            <input type="text" id="name">
+            <h3>Mobile Number </h3>
+            <h4> This number will help us to provide security</h4>
+            <input type="tel" id="name">
+            <h3>Gender</h3>
+            <h4>We use your gender to help personalize our content recommendations and ads for you.</h4>
+            <span>
+                <article><input type="radio" name="gender" value="man" class="radio"><h5>Man</h5></article>
+                <article><input type="radio" name="gender" value="woman" class="radio"><h5>Woman</h5></article>
+                <article><input type="radio" name="gender" value="non-binary" class="radio"><h5>Non-binary</h5></article>
+                <article><input type="radio" name="gender" value="something else" class="radio"><h5>Something else</h5></article>
+                <article><input type="radio" name="gender" value="prefer not to say" class="radio"><h5>Prefer not to say</h5></article>
+            </span>
+            <input type="submit" value="Next" id="next" onclick="storeTheData()">
+        </form>
+    </div>
+</body>
+</html>

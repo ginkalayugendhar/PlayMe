@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        audio {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Track List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Track Name</th>
+                <th>Duration</th>
+                <th>Likes</th>
+                <th>Type</th>
+                <th>Language</th>
+                <th>Image</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody id="track-table-body">
+            <!-- Data will be inserted here by JavaScript -->
+        </tbody>
+        
+    </table>
+    <script>
+
+async function fetchTracks() {
+    try {
+        const response = await fetch('http://localhost:8080/PlayMe/Model/tracks');
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText + ' (status code: ' + response.status + ')');
+        }
+        const tracks = await response.json();
+        console.log(tracks); // Debugging line
+        displayTracks(tracks);
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+        alert('Failed to fetch tracks. See console for details.');
+    }
+}
+
+function displayTracks(tracks) {
+    const tableBody = document.getElementById('track-table-body');
+    tableBody.innerHTML = ''; // Clear existing data
+
+    tracks.forEach(track => {
+        
+        const row = document.createElement('tr');
+
+        const idCell = document.createElement('td');
+        idCell.textContent = track.trackid;
+        row.appendChild(idCell);
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = track.trackname;
+        row.appendChild(nameCell);
+
+        const durationCell = document.createElement('td');
+        durationCell.textContent = track.duration;
+        row.appendChild(durationCell);
+
+        const likesCell = document.createElement('td');
+        if(track.likes===null)
+        {
+            likesCell.textContent = 0;
+        }
+        else{
+            likesCell.textContent = track.likes;
+        }
+        row.appendChild(likesCell);
+
+        const typeCell = document.createElement('td');
+        typeCell.textContent = track.type;
+        row.appendChild(typeCell);
+        const languageCell = document.createElement('td');
+        languageCell.textContent = track.language;
+        row.appendChild(languageCell);
+
+        const imageCell = document.createElement('td');
+        if (track.trackimage) {
+            const img = document.createElement('img');
+            img.src = `data:image/jpeg;base64,${track.trackimage}`;
+            img.alt = track.trackname;
+            img.width = 100; // Adjust the size as needed
+            imageCell.appendChild(img);
+        } else {
+            imageCell.textContent = 'No image available';
+        }
+        row.appendChild(imageCell);
+
+        const audioCell = document.createElement('td');
+        if (track.audio) {
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            const source = document.createElement('source');
+            source.src = `data:audio/mpeg;base64,${track.audio}`;
+            source.type = 'audio/mpeg';
+            audio.appendChild(source);
+            audioCell.appendChild(audio);
+        } else {
+            audioCell.textContent = 'No audio available';
+        }
+        row.appendChild(audioCell);
+
+        tableBody.appendChild(row);
+    });
+}
+
+window.onload = fetchTracks;
+
+
+    </script>
+</body>
+</html>

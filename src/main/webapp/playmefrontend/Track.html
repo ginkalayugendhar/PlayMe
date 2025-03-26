@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./Track.css">
+    <script src="./Track.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h1>Album Register</h1>
+        <form action="./AdminSignUp.html">
+            <h3>Enter Track Name</h3>
+            <input type="text" class="mail" required>
+            <h3>Upload Track Image</h3>
+            <input type="file" class="file" accept="image/*" required>
+            <h3>Upload Audio</h3>
+            <input type="file" class="file" accept="audio/*" required>
+            <h3>Enter Type</h3>
+            <input type="text" class="mail" required>
+            <input type="button" value="Add Artist" id="next" onclick="storeTrackData()">
+        </form>
+        <h4 id="result"></h4>
+    </div>
+</body>
+</html>

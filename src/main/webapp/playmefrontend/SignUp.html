@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./SignUp.css">
+    <script src="./SignUp.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h1>SignUp to start listening</h1>
+        <form action="./SignUp3.html">
+            <h3>Email address</h3>
+            <input type="email" placeholder="name@domain.com" id="mail" required>
+            <a href="./SignUp6.html">Use phone number instead.</a>
+            <input type="button" value="Next" id="next" onclick="storeTheData()">
+        </form>
+        <h4 id="result"></h4>
+        <h2>Already have an account?<a href="./Login2.html">Login in here.</a></h2>
+        <p>This site is protected by reCAPTCHA and the Google <a href=""> Privacy Policy </a> and <a href=""> Terms of Service </a> apply.</p>
+    </div>
+    <a href="./AdminSignUp.html" id="admin">@</a>
+</body>
+</html>

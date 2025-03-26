@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./SearchAlbum.css">
+    <script src="./SearchAlbum.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h1>Album Register</h1>
+        <form action="./Artist.html">
+            <h3>Enter Album Name</h3>
+            <input type="text" class="mail" required oninput="findAlbum()">
+            <div id="result_cont">
+                <!-- <h2>hii<i class="fa-solid fa-check"></i></h2> -->
+                <!-- <h2>hii</h2>
+                <h2>hii</h2> -->
+            </div>
+            <input type="button" value="Add Track" id="next" onclick="storeAlbumData()">
+        </form>
+        <a href="./Album.html">Add New Album.?</a>
+        <h4 id="result"></h4>
+        
+    </div>
+</body>
+</html>

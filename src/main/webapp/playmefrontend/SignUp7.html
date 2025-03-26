@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./SignUp3.css">
+    <script src="./SignUp3.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h2>Step 1 of 3</h2>
+        <h1>Create a password</h1>
+        <form action="./SignUp2.html">
+            <h3>Password</h3>
+            <input type="password" class="password" oninput="passwordLength()">
+            <h4 id="passwordCheck"></h4>
+            <h3>Confirm Password</h3>
+            <input type="password" class="password" oninput="samePassword()">
+            <h4 id="samePasswordCheck"></h4>
+            <h3>Your password must contain at least</h3>
+            <ul>
+                <li>1 letter</li>
+                <li>1 number or special character (example : # ? ! & )</li>
+                <li>8 characters</li>
+            </ul>
+            <input type="submit" value="Next" id="next" onclick="storeTheData()">
+        </form>
+        <p>This site is protected by reCAPTCHA and the Google <a href=""> Privacy Policy </a> and <a href=""> Terms of Service </a> apply.</p>
+    </div>
+</body>
+</html>

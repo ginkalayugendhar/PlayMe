@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./SignUp5.css">
+    <script src="./SignUp5.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h2>Step 3 of 3</h2>
+        <h1>Terms & Conditions</h1>
+        <form>
+            <span>
+                <input type="checkbox" class="check" id="checkme1" onchange="checkedFunc('checkme1','checkme2')">
+                <h4>I would prefer not to receive marketing messages from PlayMe.</h4>
+            </span>
+            <span>
+                <input type="checkbox" class="check" id="checkme2" onchange="checkedFunc('checkme1','checkme2')">
+                <h4>Share my registration data with PlayMe's content providers for marketing purpose.</h4>
+            </span>
+            <h3>By clicking on sign-up, you agree to PlayMe's <a href="">Terms and Conditions of Use.</a></h3>
+            <h3>To learn more about how Spotify collects, uses, shares and protects your personal data, please see <a
+                    href="">PlayMe's Privacy Policy.</a></h3>
+            <input type="button" value="Sign Up" id="next" name="next" onclick="saveUser()">
+        </form>
+        <h1 id="account"></h1>
+    </div>
+</body>
+
+</html>

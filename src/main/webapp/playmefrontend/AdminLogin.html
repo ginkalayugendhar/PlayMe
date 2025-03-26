@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-PlayMe</title>
+    <link rel="icon" type="image/png" href="./logo2.png">
+    <link rel="stylesheet" href="./AdminLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./AdminLogin.js" defer></script>
+</head>
+<body>
+    <div id="main_container">
+        <img src="./logo2.png" alt="" id="logo">
+        <h1>Admin Login</h1>
+        <form action="">
+            <h3>Enter Email</h3>
+            <input type="email" placeholder="demo@domain.com" class="tel">
+            <span><h3>Enter Password</h3><a href="./ForgotPassword.html">Forgot Password?</a></span>
+            <input type="password" class="tel" id="passInp">
+            <i class="fa-solid fa-eye" onmousedown="passVisible()" onmouseup="passInvisible()"></i>
+            <input type="button" value="Submit" id="next" onclick="loginCheck()">
+        </form>
+        <h4 id="result"></h4>
+        <h2>Don't have an account?<a href="./AdminSignUp.html">SignUp here.</a></h2>
+     </div>
+</body>
+</html>
