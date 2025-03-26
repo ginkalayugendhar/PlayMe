@@ -71,7 +71,6 @@ public class HomeController
 		User user = uService.checkMailLogin(mail, password);
 		if (user != null)
 		{
-			System.out.println(user);
 			return ResponseEntity.ok(user);
 		}
 		else
