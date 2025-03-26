@@ -63,7 +63,7 @@ public class HomeController
 	}
 
 	@CrossOrigin(origins = "http://127.0.0.1:5501")
-	@PostMapping("/checkEmailLogin")
+	@PostMapping("/checkMailLogin")
 	public ResponseEntity<User> checkEmailLogin(@RequestBody Map<String, String> data)
 	{
 		String mail = data.get("mail");
@@ -71,6 +71,7 @@ public class HomeController
 		User user = uService.checkMailLogin(mail, password);
 		if (user != null)
 		{
+			System.out.println(user);
 			return ResponseEntity.ok(user);
 		}
 		else
@@ -80,7 +81,7 @@ public class HomeController
 	}
 
 	@CrossOrigin(origins = "http://127.0.0.1:5501")
-	@GetMapping("/checkMobileLogin")
+	@GetMapping("/checkPhoneLogin")
 	public ResponseEntity<User> checkMobileLogin(@RequestParam String mobile, @RequestParam String password)
 	{
 		User user = uService.checkMobileLogin(mobile, password);
